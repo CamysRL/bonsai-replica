@@ -1,0 +1,136 @@
+.header-container {
+  display: flex;
+  padding: 25px 50px;
+  justify-content: space-between;
+}
+
+.header-container .logo {
+  width: 158px;
+  height: auto;
+}
+
+.menu-container .menu-icon {
+  width: 40px;
+  height: 40px;
+  cursor: pointer;
+}
+
+.nav-header {
+  position: fixed;
+  inset: 0;
+
+  background-color: var(--bg);
+
+  transform: translateX(100%);
+  transition: transform 0.3s ease-in-out;
+
+  z-index: 9999;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+
+  padding: 25px 50px;
+}
+
+.nav-header.ativo {
+  transform: translateX(0);
+}
+
+.nav-container {
+  display: flex;
+  width: 100%;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.nav-container .bonsai-icon {
+  width: 45px;
+  height: auto;
+}
+
+.nav-container .close-icon {
+  width: 45px;
+  cursor: pointer;
+}
+
+.list-links {
+  list-style: none;
+  text-align: left;
+  padding: 0;
+  width: 100%;
+}
+
+.list-links .menu-item {
+  margin: 20px 0;
+  align-items: center;
+}
+
+.menu-title {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 100%;
+  align-items: center;
+}
+
+.list-links a {
+  color: var(--text);
+  font-weight: var(--menu-weight);
+  font-size: 16px;
+  text-decoration: none;
+}
+
+.product-menu {
+  list-style: none;
+
+  max-height: 0;
+  overflow: hidden;
+
+  transition: max-height 0.3s ease;
+}
+
+.product-menu.ativo {
+  max-height: 300px; 
+  padding: 0;
+}
+
+.product-menu li {
+  margin: 20px 0;
+}
+
+.login-button {
+  width: 100%;
+  border: solid 1px var(--primary-color);
+  text-align: center;
+  padding: 15px 0;
+  border-radius: 5px;
+  margin-bottom: 18px;
+  text-decoration: none;
+  color: var(--primary-color);
+  font-weight: var(--titles-weight);
+  font-size: 12px;
+}
+
+.login-button:hover {
+  background-color: var(--primary-color);
+  color: var(--bg);
+}
+
+.start-free-button {
+  width: 100%;
+  background-color: var(--primary-color);
+  text-align: center;
+  padding: 15px 0;
+  border-radius: 5px;
+  margin-bottom: 18px;
+  text-decoration: none;
+  color: var(--bg);
+  font-weight: var(--titles-weight);
+  font-size: 12px;
+}
+
+.start-free-button:hover {
+  background-color: var(--secondary-color);
+}
