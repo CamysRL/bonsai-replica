@@ -66,7 +66,6 @@
 .list-links .menu-item {
   padding: 20px 0;
   align-items: center;
-  border-bottom: solid 1px var(--text);
 }
 
 .menu-title {
@@ -102,7 +101,7 @@
 }
 
 .product-menu li {
-  margin: 20px 0;
+  margin: 25px 0 10px 0;
 }
 
 .product-menu-bonsai {
