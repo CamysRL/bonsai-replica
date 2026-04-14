@@ -5,12 +5,14 @@ import menu from "../../assets/menu.svg";
 import closeIcon from "../../assets/close-icon.svg";
 import caretDown from "../../assets/caret-big-down.svg";
 import caretUp from "../../assets/caret-big-up.svg";
-import bonsaiIcon from "../../assets/bonsai-icon.svg";
+import caretLeft from "../../assets/caret-big-left.svg";
+import caretRight from "../../assets/caret-big-right.svg";
 
 export default function Header() {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
     const [isProductMenuOpen, setIsProductMenuOpen] = useState(false);
     const [isTemplatesMenuOpen, setIsTemplatesMenuOpen] = useState(false);
+    const [isBonsaiWorkflowMenuOpen, setIsBonsaiWorkflowMenuOpen] = useState(false);
 
     return (
         <header className="header-container">
@@ -25,7 +27,7 @@ export default function Header() {
                 />
                 <nav className={isMenuOpen ? "nav-header ativo" : "nav-header"}>
                     <div className="nav-container">
-                        <img className="bonsai-icon" src={bonsaiIcon} alt="logo" />
+                        <img className="bonsai-icon" src="/bonsai-icon.svg" alt="logo" />
                         <img className="close-icon" src={closeIcon} alt="fechar menu" onClick={() => setIsMenuOpen(false)}/>
                     </div>
                     <ul className="list-links">
@@ -41,7 +43,29 @@ export default function Header() {
                                 />
                             </div>
                             <ul className={isProductMenuOpen ? "product-menu ativo" : "product-menu"}>
-                                <li><a href="#" target="_self" title="Access Bonsai">Bonsai Workflow</a></li>
+                                <li>
+                                    <div className="menu-title">
+                                        <a href="#" target="_self" title="Access Bonsai">Bonsai Workflow</a>
+
+                                        <img 
+                                            className="product-menu-icon" 
+                                            src={isBonsaiWorkflowMenuOpen ? caretUp : caretDown} 
+                                            alt="toggle menu" 
+                                            onClick={() => setIsBonsaiWorkflowMenuOpen(!isBonsaiWorkflowMenuOpen)} 
+                                        />
+                                    </div>
+
+                                    <ul className={isBonsaiWorkflowMenuOpen ? "product-menu-bonsai ativo" : "product-menu-bonsai"} id="menu-bonsai">
+                                        <li><a href="#" target="_self" title="Access invoices">Invoices</a></li>
+                                        <li><a href="#" target="_self" title="Access proposals">Proposals</a></li>
+                                        <li><a href="#" target="_self" title="Access contracts">Contracts</a></li>
+                                        <li><a href="#" target="_self" title="Access client CRM">Client CRM</a></li>
+                                        <li><a href="#" target="_self" title="Access forms & automations">Forms & Automations</a></li>
+                                        <li><a href="#" target="_self" title="Access time tracking">Time Tracking</a></li>
+                                        <li><a href="#" target="_self" title="Access accounting">Accounting</a></li>
+                                        <li><a href="#" target="_self" title="Access task tracking">Task Tracking</a></li>
+                                    </ul>
+                                </li>
                                 <li><a href="#" target="_self" title="Access Bonsai Time Tracking">Bonsai Tax</a></li>
                                 <li><a href="#" target="_self" title="Access Bonsai Tax">Bonsai Cash</a></li>
                             </ul>
