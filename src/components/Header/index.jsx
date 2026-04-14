@@ -43,7 +43,6 @@ export default function Header() {
                                 />
                             </div>
                             <ul className={isProductMenuOpen ? "product-menu ativo" : "product-menu"}>
-                                <hr />
                                 <li>
                                     <div className="menu-title">
                                         <a href="#" target="_self" title="Access Bonsai">Bonsai Workflow</a>
@@ -56,22 +55,21 @@ export default function Header() {
                                         />
                                     </div>
 
-                                    <ul className={isBonsaiWorkflowMenuOpen ? "product-menu ativo" : "product-menu"} id="menu-bonsai">
-                                        <hr />
-                                        <li><a href="#" target="_self" title="Access Bonsai Workflow">Overview</a></li>
-                                        <li><a href="#" target="_self" title="Access Bonsai Workflow">Contracts</a></li>
-                                        <li><a href="#" target="_self" title="Access Bonsai Workflow">Proposals</a></li>
-                                        <li><a href="#" target="_self" title="Access Bonsai Workflow">Invoices</a></li>
-                                        <li><a href="#" target="_self" title="Access Bonsai Workflow">Agreements</a></li>
-                                        <li><a href="#" target="_self" title="Access Bonsai Workflow">Quotes</a></li>
-                                        <li><a href="#" target="_self" title="Access Bonsai Workflow">Scope of Work</a></li>
+                                    <ul className={isBonsaiWorkflowMenuOpen ? "product-menu-bonsai ativo" : "product-menu-bonsai"} id="menu-bonsai">
+                                        <li><a href="#" target="_self" title="Access invoices">Invoices</a></li>
+                                        <li><a href="#" target="_self" title="Access proposals">Proposals</a></li>
+                                        <li><a href="#" target="_self" title="Access contracts">Contracts</a></li>
+                                        <li><a href="#" target="_self" title="Access client CRM">Client CRM</a></li>
+                                        <li><a href="#" target="_self" title="Access forms & automations">Forms & Automations</a></li>
+                                        <li><a href="#" target="_self" title="Access time tracking">Time Tracking</a></li>
+                                        <li><a href="#" target="_self" title="Access accounting">Accounting</a></li>
+                                        <li><a href="#" target="_self" title="Access task tracking">Task Tracking</a></li>
                                     </ul>
                                 </li>
                                 <li><a href="#" target="_self" title="Access Bonsai Time Tracking">Bonsai Tax</a></li>
                                 <li><a href="#" target="_self" title="Access Bonsai Tax">Bonsai Cash</a></li>
                             </ul>
                         </li>
-                        <hr />
                         <li className="menu-item">
                             <div className="menu-title">
                                 <a href="#" target="_self" title="Access templates">Templates</a>
@@ -84,7 +82,6 @@ export default function Header() {
                                 />
                             </div>
                             <ul className={isTemplatesMenuOpen ? "product-menu ativo" : "product-menu"}>
-                                <hr />
                                 <li><a href="#" target="_self" title="Access contract templates">Contract Templates</a></li>
                                 <li><a href="#" target="_self" title="Access proposal templates">Proposal Templates</a></li>
                                 <li><a href="#" target="_self" title="Access invoice templates">Invoice Templates</a></li>
@@ -93,15 +90,12 @@ export default function Header() {
                                 <li><a href="#" target="_self" title="Access scope of work templates">Scope of Work Templates</a></li>
                             </ul>
                         </li>
-                        <hr />
                         <li className="menu-item">
                             <a href="#" target="_self" title="Access pricing">Pricing</a>
                         </li>
-                        <hr />
                         <li className="menu-item">
                             <a href="#" target="_self" title="Access pricing">Reviews</a>
                         </li>
-                        <hr />
                     </ul>
 
                     <a className="login-button" href="#" target="_self" title="Access login">LOG IN</a>

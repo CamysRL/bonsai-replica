@@ -60,11 +60,13 @@
   text-align: left;
   padding: 0;
   width: 100%;
+  margin-bottom: 30px;
 }
 
 .list-links .menu-item {
-  margin: 20px 0;
+  padding: 20px 0;
   align-items: center;
+  border-bottom: solid 1px var(--text);
 }
 
 .menu-title {
@@ -89,14 +91,40 @@
   overflow: hidden;
 
   transition: max-height 0.3s ease;
-}
-
-.product-menu.ativo {
-  max-height: 300px; 
   padding: 0;
 }
 
+.product-menu.ativo {
+  max-height: 500px;
+  padding: 0;
+  border-top: solid 1px var(--text);
+  margin-top: 20px;
+}
+
 .product-menu li {
+  margin: 20px 0;
+}
+
+.product-menu-bonsai {
+  list-style: none;
+
+  max-height: 0;
+  overflow: hidden;
+
+  transition: max-height 0.3s ease;
+
+  padding: 0;
+}
+
+.product-menu-bonsai.ativo {
+  max-height: 400px;
+  padding: 0 30px;
+  border-top: solid 1px var(--text);
+  border-bottom: solid 1px var(--text);
+  margin-top: 20px;
+}
+
+.product-menu-bonsai li {
   margin: 20px 0;
 }
 
