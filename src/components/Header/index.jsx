@@ -3,6 +3,7 @@ import "./style.css";
 import bonsaiLogo from "../../assets/bonsai-logo.svg";
 import menu from "../../assets/menu.svg";
 import closeIcon from "../../assets/close-icon.svg";
+import bonsaiIcon from "../../assets/bonsai-icon.svg";
 import caretDown from "../../assets/caret-big-down.svg";
 import caretUp from "../../assets/caret-big-up.svg";
 import caretLeft from "../../assets/caret-big-left.svg";
@@ -27,7 +28,7 @@ export default function Header() {
                 />
                 <nav className={isMenuOpen ? "nav-header ativo" : "nav-header"}>
                     <div className="nav-container">
-                        <img className="bonsai-icon" src="/bonsai-icon.svg" alt="logo" />
+                        <img className="bonsai-icon" src={bonsaiIcon} alt="logo" />
                         <img className="close-icon" src={closeIcon} alt="fechar menu" onClick={() => setIsMenuOpen(false)}/>
                     </div>
                     <ul className="list-links">
