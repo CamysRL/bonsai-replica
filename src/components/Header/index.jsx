@@ -40,13 +40,11 @@ export default function Header() {
                                 />
                             </div>
                             <ul className={isProductMenuOpen ? "product-menu ativo" : "product-menu"}>
-                                <hr />
                                 <li><a href="#" target="_self" title="Access Bonsai">Bonsai Workflow</a></li>
                                 <li><a href="#" target="_self" title="Access Bonsai Time Tracking">Bonsai Tax</a></li>
                                 <li><a href="#" target="_self" title="Access Bonsai Tax">Bonsai Cash</a></li>
                             </ul>
                         </li>
-                        <hr />
                         <li className="menu-item">
                             <div className="menu-title">
                                 <a href="#" target="_self" title="Access templates">Templates</a>
@@ -59,7 +57,6 @@ export default function Header() {
                                 />
                             </div>
                             <ul className={isTemplatesMenuOpen ? "product-menu ativo" : "product-menu"}>
-                                <hr />
                                 <li><a href="#" target="_self" title="Access contract templates">Contract Templates</a></li>
                                 <li><a href="#" target="_self" title="Access proposal templates">Proposal Templates</a></li>
                                 <li><a href="#" target="_self" title="Access invoice templates">Invoice Templates</a></li>
@@ -68,15 +65,12 @@ export default function Header() {
                                 <li><a href="#" target="_self" title="Access scope of work templates">Scope of Work Templates</a></li>
                             </ul>
                         </li>
-                        <hr />
                         <li className="menu-item">
                             <a href="#" target="_self" title="Access pricing">Pricing</a>
                         </li>
-                        <hr />
                         <li className="menu-item">
                             <a href="#" target="_self" title="Access pricing">Reviews</a>
                         </li>
-                        <hr />
                     </ul>
 
                     <a className="login-button" href="#" target="_self" title="Access login">LOG IN</a>

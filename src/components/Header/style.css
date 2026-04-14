@@ -65,6 +65,8 @@
 .list-links .menu-item {
   margin: 20px 0;
   align-items: center;
+  border-bottom: 1px solid var(--text);
+  padding-bottom: 20px;
 }
 
 .menu-title {
@@ -89,15 +91,18 @@
   overflow: hidden;
 
   transition: max-height 0.3s ease;
-}
-
-.product-menu.ativo {
-  max-height: 300px; 
   padding: 0;
 }
 
+.product-menu.ativo {
+  max-height: 300px;
+  padding: 0;
+  border-top: 1px solid var(--text);
+  margin-top: 20px;
+}
+
 .product-menu li {
-  margin: 20px 0;
+  margin: 25px 0 10px 0;
 }
 
 .login-button {
