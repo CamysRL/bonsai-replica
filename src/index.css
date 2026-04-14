@@ -1,16 +1,21 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital@0;1&display=swap');
+
 :root {
   --text: #4c4d5f;
   --bg: #fff;
   --secondary-bg: #fbfcff;
   --primary-color: #00b289;
+  --secondary-color: #009774;
   --accent: #f8db62;
   --accent-bg: #f2faff;
   --shadow:
     rgba(0, 0, 0, 0.1) 0 10px 15px -3px, rgba(0, 0, 0, 0.05) 0 4px 6px -2px;
 
-  --sans: system-ui, 'Segoe UI', Roboto, sans-serif;
-  --heading: system-ui, 'Segoe UI', Roboto, sans-serif;
-  --mono: ui-monospace, Consolas, monospace;
+  --font-text: 'Montserrat', sans-serif;
+
+  --menu-weight: 500;
+  --titles-weight: 700;
+  --text-weight: 400;
 }
 
 /* CSS Reset */
@@ -28,4 +33,6 @@ button {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  background-color: (var(--bg));
+  font-family: var(--font-text);
 }
