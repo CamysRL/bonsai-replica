@@ -5,11 +5,14 @@ import menu from "../../assets/menu.svg";
 import closeIcon from "../../assets/close-icon.svg";
 import caretDown from "../../assets/caret-big-down.svg";
 import caretUp from "../../assets/caret-big-up.svg";
+import caretLeft from "../../assets/caret-big-left.svg";
+import caretRight from "../../assets/caret-big-right.svg";
 
 export default function Header() {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
     const [isProductMenuOpen, setIsProductMenuOpen] = useState(false);
     const [isTemplatesMenuOpen, setIsTemplatesMenuOpen] = useState(false);
+    const [isBonsaiWorkflowMenuOpen, setIsBonsaiWorkflowMenuOpen] = useState(false);
 
     return (
         <header className="header-container">
@@ -41,7 +44,29 @@ export default function Header() {
                             </div>
                             <ul className={isProductMenuOpen ? "product-menu ativo" : "product-menu"}>
                                 <hr />
-                                <li><a href="#" target="_self" title="Access Bonsai">Bonsai Workflow</a></li>
+                                <li>
+                                    <div className="menu-title">
+                                        <a href="#" target="_self" title="Access Bonsai">Bonsai Workflow</a>
+
+                                        <img 
+                                            className="product-menu-icon" 
+                                            src={isBonsaiWorkflowMenuOpen ? caretUp : caretDown} 
+                                            alt="toggle menu" 
+                                            onClick={() => setIsBonsaiWorkflowMenuOpen(!isBonsaiWorkflowMenuOpen)} 
+                                        />
+                                    </div>
+
+                                    <ul className={isBonsaiWorkflowMenuOpen ? "product-menu ativo" : "product-menu"} id="menu-bonsai">
+                                        <hr />
+                                        <li><a href="#" target="_self" title="Access Bonsai Workflow">Overview</a></li>
+                                        <li><a href="#" target="_self" title="Access Bonsai Workflow">Contracts</a></li>
+                                        <li><a href="#" target="_self" title="Access Bonsai Workflow">Proposals</a></li>
+                                        <li><a href="#" target="_self" title="Access Bonsai Workflow">Invoices</a></li>
+                                        <li><a href="#" target="_self" title="Access Bonsai Workflow">Agreements</a></li>
+                                        <li><a href="#" target="_self" title="Access Bonsai Workflow">Quotes</a></li>
+                                        <li><a href="#" target="_self" title="Access Bonsai Workflow">Scope of Work</a></li>
+                                    </ul>
+                                </li>
                                 <li><a href="#" target="_self" title="Access Bonsai Time Tracking">Bonsai Tax</a></li>
                                 <li><a href="#" target="_self" title="Access Bonsai Tax">Bonsai Cash</a></li>
                             </ul>
