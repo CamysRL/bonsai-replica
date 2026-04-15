@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import "./style.css";
 import bonsaiLogo from "../../assets/bonsai-logo.svg";
 import menu from "../../assets/menu.svg";
@@ -6,14 +6,18 @@ import closeIcon from "../../assets/close-icon.svg";
 import bonsaiIcon from "../../assets/bonsai-icon.svg";
 import caretDown from "../../assets/caret-big-down.svg";
 import caretUp from "../../assets/caret-big-up.svg";
-import caretLeft from "../../assets/caret-big-left.svg";
-import caretRight from "../../assets/caret-big-right.svg";
+
 
 export default function Header() {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
     const [isProductMenuOpen, setIsProductMenuOpen] = useState(false);
     const [isTemplatesMenuOpen, setIsTemplatesMenuOpen] = useState(false);
     const [isBonsaiWorkflowMenuOpen, setIsBonsaiWorkflowMenuOpen] = useState(false);
+
+    /* Função para lidar com o overflow do body (rolagem) */
+    useEffect(() => {
+        document.body.style.overflow = isMenuOpen ? "hidden" : "auto";
+    }, [isMenuOpen]);
 
     return (
         <header className="header-container">
