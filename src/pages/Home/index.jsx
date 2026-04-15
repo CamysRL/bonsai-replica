@@ -1,27 +1,32 @@
 import { useState, useEffect } from "react";
 import "./style.css";
-import { Hero } from "../../components";
+import { Hero, CardReview } from "../../components";
 import heroDashboard from "../../assets/hero-dashboard.png";
 import withoutBonsai from "../../assets/without-bonsai-organization.svg";
 import withBonsai from "../../assets/with-bonsai-organization.svg";
 import geometricForms from "../../assets/geometric-forms.svg";
 import worldIcon from "../../assets/world-icon.svg";
+import reviewer1 from "../../assets/reviewer1.jpg";
+import reviewer2 from "../../assets/reviewer2.jpg";
+import reviewer3 from "../../assets/reviewer3.jpg";
+import reviewer4 from "../../assets/reviewer4.jpg";
 
 export default function Home() {
   return (
     <div className="home">
-      <Hero
-        title="Everything you need to run your business."
-        text="Bonsai's all-in-one product suite smat automation lets you focus on your passion, not your paperwork."
-      />
-      <div className="home-image">
-        <img
-          src={heroDashboard}
-          alt="Um homem feliz usando o Bonsai"
-          className="hero-dashboard"
+      <div className="home-hero">
+        <Hero
+          title="Everything you need to run your business."
+          text="Bonsai's all-in-one product suite smat automation lets you focus on your passion, not your paperwork."
         />
+        <div className="home-image">
+          <img
+            src={heroDashboard}
+            alt="Um homem feliz usando o Bonsai"
+            className="hero-dashboard"
+          />
+        </div>
       </div>
-
       <section className="features-section">
         <h2 className="title-section">Make more manage less</h2>
         <p className="description-section">
@@ -81,6 +86,36 @@ export default function Home() {
               Canada, UK, Australia and more, with 180 currencies supported.
             </p>
           </div>
+        </div>
+      </section>
+
+      <section className="reviews-section">
+        <h2 className="title-section">Don't just take it from us.</h2>
+        <div className="reviews-cards">
+          <CardReview
+            photoReviewer={reviewer1}
+            content="Anyone doing #freelance work should use @bonsaiinc for contracts/payment. It's amazing and saves boatloads of time."
+            nameReviewer="Nathanael Smith"
+            jobReviewer="Product Design"
+          />
+          <CardReview
+            photoReviewer={reviewer2}
+            content="Wow, @bonsaiinc's contracts are completely wonderful. If you freelance you have to check it out. Really lovely experience. h/t @hemeon"
+            nameReviewer="Samantha John"
+            jobReviewer="Designer and engineer"
+          />
+          <CardReview
+            photoReviewer={reviewer3}
+            content="@bonsaiinc is probably my all time favorite freelance tool. hands down. the team is super responsive and accessible when i have questions."
+            nameReviewer="David Urbinati"
+            jobReviewer="Motion design / animation"
+          />
+          <CardReview
+            photoReviewer={reviewer4}
+            content="For all my Freelancer / Small Agency followers, I wish I’d discovered @bonsaiinc long ago - great templated contract"
+            nameReviewer="Emily Davis"
+            jobReviewer="Founder of TidingsCo"
+          />
         </div>
       </section>
     </div>
