@@ -1,0 +1,173 @@
+.card-review {
+  display: flex;
+  flex-direction: column;
+  margin: 20px 10px;
+  position: relative;
+  margin-top: 100px;
+}
+
+.upper-card {
+  display: flex;
+  align-items: flex-end;
+  gap: 30px;
+
+  position: absolute;
+  top: -60px;
+}
+
+.photo-reviewer {
+  width: 100px;
+  height: 120px;
+  border-top-right-radius: 50%;
+  border-bottom-left-radius: 50%;
+  object-fit: cover;
+  border: 1px solid var(--text);
+}
+
+.card {
+  background-color: var(--secondary-bg);
+  padding: 90px 15px 50px;
+  border-radius: 5px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.content {
+  font-size: 16px;
+}
+
+.reviewer-info {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.reviewer-info .name-reviewer {
+  font-weight: var(--titles-weight);
+  font-size: 16px;
+}
+
+.reviewer-info .job-reviewer {
+  font-size: 14px;
+  color: var(--text);
+}
+
+@media screen and (min-width: 768px) {
+  .card-review {
+    margin-top: 120px;
+  }
+
+  .upper-card {
+    gap: 50px;
+
+    top: -80px;
+  }
+
+  .photo-reviewer {
+    width: 130px;
+    height: 150px;
+  }
+
+  .card {
+    padding: 90px 30px 50px;
+    gap: 25px;
+  }
+
+  .content {
+    font-size: 18px;
+  }
+
+  .reviewer-info {
+    gap: 8px;
+  }
+
+  .reviewer-info .name-reviewer {
+    font-size: 18px;
+  }
+
+  .reviewer-info .job-reviewer {
+    font-size: 16px;
+  }
+}
+
+@media screen and (min-width: 1240px) {
+  .upper-card {
+    gap: 50px;
+
+    top: -100px;
+  }
+
+  .card {
+    min-height: 350px;
+  }
+
+  .card-review {
+    height: 100%;
+  }
+
+  .reviews-cards > * {
+    display: flex;
+  }
+
+  .photo-reviewer {
+    width: 150px;
+    height: 170px;
+  }
+
+  .card {
+    padding: 90px 30px 50px;
+    gap: 25px;
+  }
+
+  .content {
+    font-size: 20px;
+  }
+
+  .reviewer-info {
+    gap: 10px;
+  }
+
+  .reviewer-info .name-reviewer {
+    font-size: 20px;
+  }
+
+  .reviewer-info .job-reviewer {
+    font-size: 18px;
+  }
+}
+
+@media screen and (min-width: 2000px) {
+  .upper-card {
+    gap: 60px;
+
+    top: -120px;
+  }
+
+  .card {
+    min-height: 300px;
+  }
+
+  .photo-reviewer {
+    width: 180px;
+    height: 200px;
+  }
+
+  .card {
+    padding: 100px 50px 60px;
+    gap: 40px;
+    margin-top: 20px;
+  }
+
+  .content {
+    font-size: 22px;
+  }
+
+  .reviewer-info .name-reviewer {
+    font-size: 22px;
+  }
+
+  .reviewer-info .job-reviewer {
+    font-size: 20px;
+  }
+}
