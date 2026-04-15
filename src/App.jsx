@@ -1,6 +1,7 @@
-import reactLogo from './assets/react.svg'
-import './App.css'
+import reactLogo from './assets/react.svg';
+import './App.css';
 import Header from './components/Header';
+import Footer from './components/Footer';
 
 
 function App() {
@@ -12,6 +13,7 @@ function App() {
       <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat sint facilis voluptatibus. Autem ullam magnam dolorum obcaecati temporibus, quia, delectus quis natus pariatur voluptatum dolorem culpa fuga repellat provident saepe!</p>
       <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat sint facilis voluptatibus. Autem ullam magnam dolorum obcaecati temporibus, quia, delectus quis natus pariatur voluptatum dolorem culpa fuga repellat provident saepe!</p>
       <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat sint facilis voluptatibus. Autem ullam magnam dolorum obcaecati temporibus, quia, delectus quis natus pariatur voluptatum dolorem culpa fuga repellat provident saepe!</p>
+      <Footer />
     </>
   );
 }

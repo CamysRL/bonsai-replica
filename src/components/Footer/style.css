@@ -1,0 +1,113 @@
+.footer-container {
+  padding: 25px 50px;
+  padding-bottom: 60px;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  margin-top: 60px;
+}
+
+.footer-container a {
+  text-decoration: none;
+  color: var(--text);
+}
+
+.footer-container li {
+  list-style: none;
+  margin-bottom: 12px;
+  width: 100%;
+}
+
+.footer-container ul {
+  padding: 0;
+  font-size: 16px;
+}
+
+.footer-container p {
+  font-weight: var(--titles-weight);
+  font-size: 17px;
+}
+
+.templates-menu {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  gap: 10px;
+  align-items: center;
+}
+
+.templates-menu .templates-menu-icon {
+  width: 20px;
+  height: 20px;
+}
+
+.invoice-templates,
+.proposal-templates,
+.contract-templates,
+.agreement-templates,
+.scope-of-work-templates,
+.quote-templates,
+.comparisons-templates {
+  list-style: none;
+
+  max-height: 0;
+  overflow: hidden;
+
+  transition: max-height 0.3s ease;
+  padding: 0;
+}
+
+.invoice-templates.ativo,
+.proposal-templates.ativo,
+.contract-templates.ativo,
+.agreement-templates.ativo,
+.scope-of-work-templates.ativo,
+.quote-templates.ativo,
+.comparisons-templates.ativo {
+  max-height: 600px;
+  padding: 0 0 0 20px;
+  margin-top: 15px;
+  border-bottom: solid 1px var(--text);
+  border-top: solid 1px var(--text);
+}
+
+.invoice-templates li,
+.proposal-templates li,
+.contract-templates li,
+.agreement-templates li,
+.scope-of-work-templates li,
+.quote-templates li,
+.comparisons-templates li {
+  margin: 10px 0 15px 0;
+}
+
+@media screen and (min-width: 768px) {
+  .footer-container {
+    padding: 100px 70px 100px 70px;
+    padding-bottom: 80px;
+  }
+
+  .footer-container p {
+    font-size: 18px;
+  }
+
+  .footer-container li {
+    font-size: 17px;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .footer-container {
+    flex-direction: column;
+    padding: 80px 70px 80px 70px;
+  }
+
+  .footer-container p {
+    font-size: 19px;
+  }
+
+  .footer-container li {
+    font-size: 18px;
+  }
+
+}
