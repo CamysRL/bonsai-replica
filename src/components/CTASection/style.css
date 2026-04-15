@@ -12,6 +12,10 @@
   margin-bottom: 30px;
 }
 
+.cta-title span {
+    color: var(--primary-color);
+}
+
 .cta-button {
   padding: 15px 30px;
   background-color: var(--primary-color);
