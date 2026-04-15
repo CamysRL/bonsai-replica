@@ -1,6 +1,10 @@
+* {
+  box-sizing: border-box;
+}
+
 .header-container {
   display: flex;
-  padding: 25px 50px;
+  padding: 25px 20px;
   justify-content: space-between;
 }
 
@@ -17,7 +21,10 @@
 
 .nav-header {
   position: fixed;
-  inset: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
 
   background-color: var(--bg);
 
@@ -31,7 +38,7 @@
   justify-content: flex-start;
   align-items: flex-start;
 
-  padding: 25px 50px;
+  padding: 25px 20px;
 
   overflow-y: auto;
   -webkit-overflow-scrolling: touch;

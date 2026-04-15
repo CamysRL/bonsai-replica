@@ -1,13 +1,31 @@
-.hero-dashboard {
-    margin-bottom: 40px;
+* {
+  box-sizing: border-box;
+}
+
+.home {
+    display: flex;
+    flex-direction: column;
+}
+
+.home-image {
     width: 100%;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+}
+
+.hero-dashboard {
+    width: 100%;
+    max-width: 600px;
+    height: auto;
 }
 
 .features-section, 
 .trust-section {
     display: flex;
     flex-direction: column;
-    padding: 25px 40px;
+    padding: 25px 20px;
     margin-bottom: 35px;
 }
 

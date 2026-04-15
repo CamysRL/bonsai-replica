@@ -14,12 +14,13 @@ export default function Home() {
         title="Everything you need to run your business."
         text="Bonsai's all-in-one product suite smat automation lets you focus on your passion, not your paperwork."
       />
-
-      <img
-        src={heroDashboard}
-        alt="Um homem feliz usando o Bonsai"
-        className="hero-dashboard"
-      />
+      <div className="home-image">
+        <img
+          src={heroDashboard}
+          alt="Um homem feliz usando o Bonsai"
+          className="hero-dashboard"
+        />
+      </div>
 
       <section className="features-section">
         <h2 className="title-section">Make more manage less</h2>
@@ -48,10 +49,12 @@ export default function Home() {
       </section>
 
       <section className="trust-section">
-        <h2 className="title-section">Trusted by 500K+ self-employed workers
-and small businesses</h2>
+        <h2 className="title-section">
+          Trusted by 500K+ self-employed workers and small businesses
+        </h2>
         <p className="description-section">
-          Whether you’re just getting started or your business is booming, Bonsai has you covered.
+          Whether you’re just getting started or your business is booming,
+          Bonsai has you covered.
         </p>
         <div className="bonsai-trust-section">
           <div className="bonsai-trust-card">
@@ -62,7 +65,8 @@ and small businesses</h2>
             />
             <p className="bonsai-trust-subtitle">Built for All Work Types</p>
             <p className="bonsai-trust-description">
-              We proudly back people with wide-ranging businesses—from design and marketing to development, writing, and photography.
+              We proudly back people with wide-ranging businesses—from design
+              and marketing to development, writing, and photography.
             </p>
           </div>
           <div className="bonsai-trust-card">
@@ -73,12 +77,12 @@ and small businesses</h2>
             />
             <p className="bonsai-trust-subtitle">Built for Global Businesses</p>
             <p className="bonsai-trust-description">
-              Bonsai has international coverage across the United States, Canada, UK, Australia and more, with 180 currencies supported.
+              Bonsai has international coverage across the United States,
+              Canada, UK, Australia and more, with 180 currencies supported.
             </p>
           </div>
         </div>
       </section>
-
     </div>
   );
 }
