@@ -2,10 +2,19 @@
   box-sizing: border-box;
 }
 
+/* =========================
+   HEADER BASE (MOBILE)
+========================= */
+
 .header-container {
   display: flex;
   padding: 25px 20px;
   justify-content: space-between;
+  position: relative;
+  z-index: 9999;
+  position: sticky;
+  top: 0;
+  background-color: var(--bg);
 }
 
 .header-container .logo {
@@ -19,6 +28,10 @@
   cursor: pointer;
 }
 
+/* =========================
+   NAV MOBILE OVERLAY
+========================= */
+
 .nav-header {
   position: fixed;
   top: 0;
@@ -31,7 +44,7 @@
   transform: translateX(100%);
   transition: transform 0.3s ease-in-out;
 
-  z-index: 9999;
+  z-index: 3000;
 
   display: flex;
   flex-direction: column;
@@ -43,14 +56,12 @@
   overflow-y: auto;
   -webkit-overflow-scrolling: touch;
 
-  /* Para esconder a barra de rolagem */
-  scrollbar-width: none; /* Firefox */
-  -ms-overflow-style: none; /* IE/Edge antigo */
+  scrollbar-width: none;
+  -ms-overflow-style: none;
 }
 
 .nav-header::-webkit-scrollbar {
-  /* Para esconder a barra de rolagem */
-  display: none; /* Chrome, Safari */
+  display: none;
 }
 
 .nav-header.ativo {
@@ -84,7 +95,7 @@
 
 .list-links .menu-item {
   padding: 20px 0;
-  align-items: center;
+  position: relative;
 }
 
 .menu-title {
@@ -101,6 +112,10 @@
   font-size: 16px;
   text-decoration: none;
 }
+
+/* =========================
+   SUBMENUS MOBILE
+========================= */
 
 .product-menu {
   list-style: none;
@@ -121,7 +136,7 @@
 }
 
 .product-menu li {
-  margin: 25px 0 25px 0;
+  margin: 25px 0;
 }
 
 .product-menu-bonsai {
@@ -147,17 +162,25 @@
   margin: 20px 0;
 }
 
-.login-button {
+/* =========================
+   BOTÕES MOBILE
+========================= */
+
+.login-button,
+.start-free-button {
   width: 100%;
-  border: solid 1px var(--primary-color);
   text-align: center;
   padding: 15px 0;
   border-radius: 5px;
   margin-bottom: 18px;
   text-decoration: none;
-  color: var(--primary-color);
   font-weight: var(--titles-weight);
   font-size: 12px;
+}
+
+.login-button {
+  border: solid 1px var(--primary-color);
+  color: var(--primary-color);
 }
 
 .login-button:hover {
@@ -166,21 +189,17 @@
 }
 
 .start-free-button {
-  width: 100%;
   background-color: var(--primary-color);
-  text-align: center;
-  padding: 15px 0;
-  border-radius: 5px;
-  margin-bottom: 18px;
-  text-decoration: none;
   color: var(--bg);
-  font-weight: var(--titles-weight);
-  font-size: 12px;
 }
 
 .start-free-button:hover {
   background-color: var(--secondary-color);
 }
+
+/* =========================
+   TABLET
+========================= */
 
 @media screen and (min-width: 768px) {
   .header-container {
@@ -188,13 +207,10 @@
   }
 
   .nav-container {
-    padding: 0;
-    margin: 0;
     padding: 35px 45px;
   }
 
-  .nav-container .bonsai-icon,
-  .nav-container .menu-icon {
+  .nav-container .bonsai-icon {
     width: 50px;
   }
 
@@ -216,20 +232,137 @@
     margin-top: 25px;
   }
 
-  .product-menu li {
-    margin: 30px 0 30px 0;
+  .login-button,
+  .start-free-button {
+    padding: 18px 0;
+    margin: 0 45px 30px 45px;
+    font-size: 16px;
+    width: calc(100% - 90px);
+  }
+}
+
+/* =========================
+   DESKTOP
+========================= */
+
+@media screen and (min-width: 1240px) {
+  .header-container {
+    z-index: 9999;
   }
 
-  .product-menu-bonsai li {
-    margin: 30px 0;
+  .header-container .logo {
+    width: 208px;
+  }
+
+  .menu-container .menu-icon {
+    display: none;
+  }
+
+  /* NAV DESKTOP */
+  .nav-header {
+    position: relative;
+    transform: none !important;
+
+    height: auto;
+    width: auto;
+
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+
+    background: transparent;
+    padding: 0;
+
+    overflow: visible;
+  }
+
+  .nav-container .bonsai-icon,
+  .nav-container .close-icon {
+    display: none;
+  }
+
+  /* MENU PRINCIPAL */
+  .list-links {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 25px;
+
+    margin: 0;
+    padding: 0;
+  }
+
+  .list-links .menu-item {
+    position: relative;
+    padding: 0;
+  }
+
+  .menu-title {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    cursor: pointer;
+  }
+
+  .list-links a {
+    font-size: 16px;
+  }
+
+  /* =========================
+     DROPDOWN
+  ========================= */
+
+  .product-menu {
+    position: absolute;
+    top: calc(100% + 10px);
+    left: 0;
+
+    width: 260px;
+
+    background: var(--bg);
+    border: 1px solid var(--text);
+    border-radius: 6px;
+
+    padding: 0px;
+
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+
+    display: none;
+    z-index: 99999;
+  }
+
+  .product-menu.ativo {
+    display: block;
+    margin: 10px;
+    padding: 10px;
+  }
+
+  .product-menu li {
+    margin: 15px 0;
+    position: relative;
+    padding: 0px 26px;
+  }
+
+  .product-menu-bonsai,
+  .product-menu-bonsai.ativo {
+    border: none;
+    margin: 0;
+    padding-left: 0px;
   }
 
   .login-button,
   .start-free-button {
-    padding: 18px 0;
-    margin-bottom: 30px;
-    font-size: 16px;
-    width: calc(100% - 90px);
-    margin: 0 45px 30px 45px;
+    padding: 12px 30px;
+    font-size: 14px;
+    border-radius: 6px;
+    font-weight: 600;
+    margin: 0 10px;
+    transition: all 0.2s ease;
+    white-space: nowrap;
+  }
+
+  .login-button {
+    margin-left: 40px;
   }
 }
