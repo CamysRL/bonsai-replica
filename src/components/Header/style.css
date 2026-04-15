@@ -94,16 +94,15 @@
 }
 
 .product-menu.ativo {
-  max-height: 500px;
-  padding: 0;
+  max-height: 600px;
+  padding: 0 0 0 30px;
   border-top: solid 1px var(--text);
   border-bottom: solid 1px var(--text);
   margin-top: 20px;
-  padding: 0 0 0 30px;
 }
 
 .product-menu li {
-  margin: 25px 0 10px 0;
+  margin: 25px 0 25px 0;
 }
 
 .product-menu-bonsai {
@@ -119,7 +118,7 @@
 
 .product-menu-bonsai.ativo {
   max-height: 400px;
-  padding: 0 30px;
+  padding: 0 0 0 30px;
   border-top: solid 1px var(--text);
   border-bottom: solid 1px var(--text);
   margin-top: 20px;
