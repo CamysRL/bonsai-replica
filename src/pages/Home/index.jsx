@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import "./style.css";
-import { Hero, CardReview } from "../../components";
+import { Hero, CardReview, CTASection } from "../../components";
 import heroDashboard from "../../assets/hero-dashboard.png";
 import withoutBonsai from "../../assets/without-bonsai-organization.svg";
 import withBonsai from "../../assets/with-bonsai-organization.svg";
@@ -117,6 +117,9 @@ export default function Home() {
             jobReviewer="Founder of TidingsCo"
           />
         </div>
+      </section>
+      <section className="newsletter-section">
+        <CTASection />
       </section>
     </div>
   );

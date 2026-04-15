@@ -62,16 +62,15 @@
   width: 100%;
   flex-direction: row;
   justify-content: space-between;
-  padding: 25px 20px;
 }
 
 .nav-container .bonsai-icon {
-  width: 45px;
+  width: 40px;
   height: auto;
 }
 
 .nav-container .close-icon {
-  width: 45px;
+  width: 40px;
   cursor: pointer;
 }
 

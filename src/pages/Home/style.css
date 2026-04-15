@@ -88,6 +88,10 @@
   margin-bottom: 15px;
 }
 
+.newsletter-section {
+  margin: 0 10px;
+}
+
 @media screen and (min-width: 768px) {
   .features-section,
   .trust-section,
@@ -124,6 +128,10 @@
   .bonsai-trust-description {
     font-size: 18px;
     text-align: center;
+  }
+
+  .newsletter-section {
+    margin: 0 20px;
   }
 }
 
@@ -188,6 +196,10 @@
     grid-template-columns: repeat(2, 1fr);
     gap: 20px;
   }
+
+  .newsletter-section {
+    margin: 0 30px;
+  }
 }
 
 @media screen and (min-width: 2000px) {
@@ -221,5 +233,9 @@
 
   .bonsai-trust-description {
     font-size: 22px;
+  }
+
+  .newsletter-section {
+    margin: 0 50px;
   }
 }
