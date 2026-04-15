@@ -32,6 +32,18 @@
   align-items: flex-start;
 
   padding: 25px 50px;
+
+  overflow-y: auto;         
+  -webkit-overflow-scrolling: touch;
+
+  /* Para esconder a barra de rolagem */
+  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none; /* IE/Edge antigo */
+}
+
+.nav-header::-webkit-scrollbar {
+  /* Para esconder a barra de rolagem */
+  display: none; /* Chrome, Safari */
 }
 
 .nav-header.ativo {
