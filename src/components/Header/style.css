@@ -366,3 +366,22 @@
     margin-left: 40px;
   }
 }
+
+@media screen and (min-width: 2000px) {
+  .list-links {
+    gap: 60px;
+  }
+
+  .list-links a {
+    font-size: 20px;
+  }
+
+  .login-button,
+  .start-free-button {
+    margin: 0 20px;
+  }
+
+  .login-button {
+    margin-left: 80px;
+  }
+}
